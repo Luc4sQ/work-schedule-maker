@@ -1,4 +1,4 @@
-import numpy as np
+#import numpy as np
 import mean as mn
 
 # the boundarys of worktime
