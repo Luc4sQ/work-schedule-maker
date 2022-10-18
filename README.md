@@ -10,7 +10,7 @@ $$ (x_1,\ldots,x_n) $$
 
 welche \(n\) Mitarbeiter repräsentiert, eine Ausgabe generiert wird in Form einer Matrix
 
-$$ (a_ij) := \textrm{Mitarbeiter }i\textrm{ arbeitet am Tag }j\textrm{ exakt}a_ij\textrm{ Stunden.}$$
+$$ (a_{ij}) := \textrm{Mitarbeiter }i\textrm{ arbeitet am Tag }j\textrm{ exakt }a_{ij}\textrm{ Stunden.}$$
 
 # Getting Started with Create React App
 
