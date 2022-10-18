@@ -15,6 +15,7 @@ Now the **argument** of our procedure is defined by
 $$w := (w_1,\ldots,w_n).$$
 
 My first target for this program is, that it returns a matrix with values $t_{ij}$, which represents how much time $t_{ij}$ the worker $i$ must spent on day $j$. The matrix should look like
+
 $$J=\begin{pmatrix}j_{11}& j_{12} & j_{13} &j_{14}& j_{15}&j_{16}\\j_{21} &j_{22} & j_{23} & j_{24}&j_{25} &j_{26}\\\vdots & \vdots & \vdots & \vdots & \vdots &\vdots\\j_{n1}&j_{n2}& j_{n3}& j_{n4}&j_{n5} &j_{n6}\end{pmatrix}\in \mathbb{R}^{6\times n}$$
 
 # Further outlook
