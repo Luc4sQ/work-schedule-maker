@@ -1,6 +1,13 @@
 # EINLEITUNG
 
-$$ \sum $$
+Dieses Repository ist dafür gedacht meine Fähigkeiten in TS und React auszubauen. 
+
+Dafür ist geplant ein Programm zu gestalten, welches einen "Arbeitsplan" erstellt.
+
+Detailliert möchte ich erreichen, dass für eine Eingabe
+$$ (x_1,\ldots,x_n) $$
+welche \(n\) Mitarbeiter repräsentiert, eine Ausgabe generiert wird in Form einer Matrix
+$$ (a_ij) := \textrm{Mitarbeiter }i\textrm{ arbeitet am Tag }j\textrm{ exakt}a_ij\textrm{ Stunden.}$$
 
 # Getting Started with Create React App
 
