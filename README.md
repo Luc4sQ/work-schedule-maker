@@ -1,16 +1,30 @@
-# EINLEITUNG
+# Introduction
 
-Dieses Repository ist dafür gedacht meine Fähigkeiten in TS und React auszubauen. 
+This Repository is build secondary for advancing my programming skills. Primarily i want to solve a common problem, which i encounter in my working environment. **building work plans**!
 
-Dafür ist geplant ein Programm zu gestalten, welches einen "Arbeitsplan" erstellt.
+We assume we got $n$ different worker. We call worker number $i$ for now $w_i$. 
 
-Detailliert möchte ich erreichen, dass für eine Eingabe
+Every $w_i$ has the following properties:
 
-$$ (x_1,\ldots,x_n) $$
+|description|datatype|
+|---|---|
+| maximum worktime per month | number |
+| explicit weekdays and times $w_i$ can work | matrix of numbers |
 
-welche \(n\) Mitarbeiter repräsentiert, eine Ausgabe generiert wird in Form einer Matrix
+Now the **argument** of our procedure is defined by
+$$w := (w_1,\ldots,w_n).$$
 
-$$ (a_{ij}) := \textrm{Mitarbeiter }i\textrm{ arbeitet am Tag }j\textrm{ exakt }a_{ij}\textrm{ Stunden.}$$
+My first target for this program is, that it returns a matrix with values $t_{ij}$, which represents how much time $t_{ij}$ the worker $i$ must spent on day $j$. The matrix should look like
+$$J=\begin{pmatrix}
+ j_{11}& j_{12} & j_{13} &j_{14}& j_{15}&j_{16}\\
+j_{21} &j_{22} & j_{23} & j_{24}&j_{25} &j_{26}\\
+\vdots & \vdots&\vdots& \vdots& \vdots&\vdots\\
+j_{n1}&j_{n2}& j_{n3}& j_{n4}&j_{n5} &j_{n6}
+\end{pmatrix}\in \mathbb{R}^{6\times n}$$
+
+# Further outlook
+
+My main (lol) goal is, that this program accepts an explicit input like mentioned above, returns a whole plan (with cool visuals) and accepts many more options like preferations of employees etc.
 
 # Getting Started with Create React App
 
