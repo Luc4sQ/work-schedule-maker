@@ -3,3 +3,12 @@
 export type employee = {
     worktime: number;
 };
+
+export type week = {
+    days: number;
+    timePerUnit: number;
+};
+
+export type plan = {
+    content: number[][];
+};
