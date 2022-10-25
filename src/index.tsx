@@ -3,11 +3,6 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { employee, week, plan } from './employee/workStructure';
-
-let x: week = {days: 3, timePerUnit: 4};
-
-let s: string = x.days.toString();
 
 
 const root = ReactDOM.createRoot(
@@ -16,9 +11,6 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <App />
-    <p>
-      {s}
-    </p>
   </React.StrictMode>
 );
 
