@@ -1,13 +1,53 @@
 // the "worktime" attribute describes how much time can be spent for 1 month
 
-export interface Employee {
-    worktime: number;
+export class Day {
+    dayOfYear: Number;
+    constructor(x: Number) {
+        this.dayOfYear = x;
+    }
 };
 
+let pt = new Day(3);
+
+pt.dayOfYear = 3;
+
 export interface Week  {
-    days: number;
-    timePerUnit: number;
+    monday: Day;
+    tuesday: Day;
+    wednesday: Day; 
+    thursday: Day;
+    friday: Day;
+    saturday: Day;
+    sunday: Day[];
 };
+
+export interface Month {
+    days: Number;
+};
+
+export interface Employee {
+    worktimePerMonth: Number;
+    unexpectedDays: Day[];
+};
+
+export interface OpeningTimes {
+    startTime: Number;
+    endTime: Number;
+}
+
+export interface Workweek {
+    monday: OpeningTimes;
+    tuesday: OpeningTimes;
+    wednesday: OpeningTimes; 
+    thursday: OpeningTimes;
+    friday: OpeningTimes;
+    saturday: OpeningTimes;
+    sunday: OpeningTimes;
+}
+
+export interface Company {
+
+}
 
 export function parameterInput(): {employ: Employee, week: Week} {
     
