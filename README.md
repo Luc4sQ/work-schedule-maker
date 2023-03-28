@@ -2,24 +2,42 @@
 
 This Repository is build secondary for advancing my programming skills. Primarily i want to solve a common problem, which i encounter in my working environment. **building work plans**!
 
-We assume we got $n$ different worker. We call worker number $i$ for now $w_i$. 
+We assume we got $N$ different **worker**. We call worker number $i$ for now $w_i$. 
 
 Every $w_i$ has the following properties:
 
 |description|datatype|
 |---|---|
 | maximum worktime per month | number |
-| explicit weekdays and times $w_i$ can work | matrix of numbers |
+| explicit weekdays and times $w_i$ can't work | matrix of days and mapped times |
+
+Now additionally we assume we have a **company** $C$ with properties:
+
+|description|datatype|
+|---|---|
+| minimal worktime per day and employee | number |
+| maximal worktime per day and employee (fixed in general by laws) | number |
+| maximal hours of worktime on day $i$ | number |
+|
 
 Now the **argument** of our procedure is defined by
-$$w := (w_1,\ldots,w_n).$$
+$$x := (w_1,\ldots,w_N,C).$$
 
-My first target for this program is, that it returns a matrix with values $t_{ij}$, which represents how much time $t_{ij}$ the worker $i$ must spent on day $j$. The matrix should look like
+My first target for this program is, that it returns two matrices with values $t_{ij}$ and $s_{ij}$, which represents the exact time $t_{ij}$ when the worker $i$ starts on day $j$ and exact time $s_{ij}$ when the worker $i$ stops on day $j$. Depending $M$ ist the number of days in the current month, the matrices should look like
 
-$$J=\begin{pmatrix}j_{11}& j_{12} & j_{13} &j_{14}& j_{15}&j_{16}\\
-j_{21} &j_{22} & j_{23} & j_{24}&j_{25} &j_{26}\\
-\vdots & \vdots & \vdots & \vdots & \vdots &\vdots\\
-j_{n1}&j_{n2}& j_{n3}& j_{n4}&j_{n5} &j_{n6}\end{pmatrix}\in \mathbb{R}^{6\times n}$$
+$$S=\begin{pmatrix}s_{11}& s_{12} & \ldots & s_{1M} \\
+s_{21} &s_{22} & \ldots & s_{2M}\\
+\vdots & \vdots &  & \vdots\\
+s_{N1}&s_{N2}& \ldots& s_{NM}\end{pmatrix}\in \mathbb{R}^{M\times N},\quad T=\begin{pmatrix}t_{11}& t_{12} & \ldots & t_{1M} \\
+t_{21} &t_{22} & \ldots & t_{2M}\\
+\vdots & \vdots &  & \vdots\\
+t_{N1}&t_{N2}& \ldots& t_{NM}\end{pmatrix}\in \mathbb{R}^{M\times N}$$
+
+With further considerations i plan to solve this problem via an optimization problem approach. That means i search an optimal solution 
+
+$$x^* \in \mathbb{R}^{2MN}$$
+
+such that $x^*$ is a "valid" plan.
 
 # Further outlook
 
