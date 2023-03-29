@@ -18,7 +18,6 @@ Now additionally we assume we have a **company** $C$ with properties:
 | minimal worktime per day and employee | number |
 | maximal worktime per day and employee (fixed in general by laws) | number |
 | maximal hours of worktime on day $i$ | number |
-|
 
 Now the **argument** of our procedure is defined by
 $$x := (w_1,\ldots,w_N,C).$$
